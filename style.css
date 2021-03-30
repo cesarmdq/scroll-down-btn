@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: black;
+  color: white;
+}
+header {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.scrollDownContainer {
+  position: absolute;
+  bottom: 25px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  cursor: default;
+}
+.mouseIcon {
+  position: relative;
+  width: 30px;
+  height: 50px;
+  display: block;
+  border: 2px solid #fff;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  cursor: default;
+}
+.mouseIconWheel {
+  position: absolute;
+  top: 10px;
+  left: calc(50% - 4px);
+  width: 8px;
+  height: 8px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  animation: wheelScroll 3s ease infinite;
+  opacity: 1;
+}
+.scrollDownContainer p {
+  font-family: Roboto-Regular, sans-serif;
+  font-size: 16px;
+  line-height: 34px;
+  letter-spacing: 0;
+  color: #fff;
+}
+@keyframes wheelScroll {
+  0% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  100% {
+    opacity: 0;
+  }
+}
